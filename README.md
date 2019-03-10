@@ -48,4 +48,9 @@ Stop current timer if it's running.
 
 ## Special thanks
 
-[gravyraveydavey/timecamp-node-tasks-api](https://github.com/gravyraveydavey/timecamp-node-tasks-api)
+* [gravyraveydavey/timecamp-node-tasks-api](https://github.com/gravyraveydavey/timecamp-node-tasks-api)
+
+## Changelog
+
+* 1.0.0 - took 6h to make first version
+
