@@ -14,28 +14,27 @@ Access TimeCamp using CLI to make time tracking easier.
 
 | Flag | Alt            | Description  |
 | -----|----------------| -------------|
-| -s   | --start [note] | start new timer with a note |
-| -h   | --stop     	| stop current timer |
+| -t   | --task [note]  | specify api action <start-timer|stop-timer> |
 | -a   | --auto     	| try to match a task for new timer based on a task keywoards and a note |
 | -k   | --key 			| your API key (optional) |
 | -v   | --verbose 		| enable console logging |
-| -d   | --dryrun 		| dry run |
+| -n   | --note [note] 	| add a note |
 
 ## Usage
 
 ### Start a new timer without a task
 
-`timecamp -s "Time entry note"`
+`timecamp -t start-timer -n "Time entry note"`
 Start new timer and stop automatically current timer if it was running.
 
 ### Start a new timer and try to find matching task
 
-`timecamp -a -s "Time entry note with keywoard"`
+`timecamp -t start-timer -a -n "Time entry note with keywoard"`
 Start new timer and try to find proper task if a keywoard from a task is found in the note from the argument.
 
 ### Stop a timer
 
-`timecamp -h`
+`timecamp -t stop-timer`
 Stop current timer if it's running.
 
 ## Special thanks
