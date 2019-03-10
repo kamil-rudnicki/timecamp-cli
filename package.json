@@ -1,0 +1,33 @@
+{
+  "name": "timecamp-cli",
+  "version": "1.0.0",
+  "description": "TimeCamp CLI in Node to make time tracking easier",
+  "main": "index.js",
+  "scripts": {
+    "test": "timecamp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamil-rudnicki/timecamp-cli.git"
+  },
+  "keywords": [
+    "timecamp",
+    "time tracking"
+  ],
+  "author": "Kamil Rudnicki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamil-rudnicki/timecamp-cli/issues"
+  },
+  "bin": {
+    "timecamp": "./index.js"
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "fs": "0.0.1-security",
+    "jsonfile": "^2.4.0",
+    "request": "^2.76.0"
+  },
+  "homepage": "https://github.com/kamil-rudnicki/timecamp-cli#readme"
+}
