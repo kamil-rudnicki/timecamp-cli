@@ -14,7 +14,7 @@ Access TimeCamp using CLI to make time tracking easier.
 
 | Flag | Alt            | Description  |
 | -----|----------------| -------------|
-| -t   | --task [note]  | specify api action <start-timer|stop-timer> |
+| -t   | --task [note]  | specify api action: start-timer, stop-timer |
 | -a   | --auto     	| try to match a task for new timer based on a task keywoards and a note |
 | -k   | --key 			| your API key (optional) |
 | -v   | --verbose 		| enable console logging |
