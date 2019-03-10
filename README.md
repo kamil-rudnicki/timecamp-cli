@@ -39,6 +39,12 @@ Start new timer and try to find proper task if a keyword from a task is found in
 `timecamp -t stop-timer`
 Stop current timer if it's running.
 
+## Ideas
+
+* `timer-status` action to get current timer and elapsed time, then use crontab to show notification of currently running timer every 15 minutes
+* `add-keywoard` action to add new keyword quickly
+* parameter to start a new timer with a note from a clipboard and try to find a task automatically
+
 ## Special thanks
 
 [gravyraveydavey/timecamp-node-tasks-api](https://github.com/gravyraveydavey/timecamp-node-tasks-api)
