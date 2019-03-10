@@ -2,7 +2,7 @@
 
 Access TimeCamp using CLI to make time tracking easier.
 
-![](./demo.gif =250x)
+![](demo.gif | width=100)
 
 ## Setup
 
