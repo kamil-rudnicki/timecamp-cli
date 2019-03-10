@@ -4,10 +4,11 @@ var fs = require('fs');
 var jsonfile = require('jsonfile')
 var program = require('commander');
 var moment = require('moment');
+var path = require('path');
 var co = require('co');
 var prompt = require('co-prompt');
 
-eval(fs.readFileSync('key.js')+'');
+eval(fs.readFileSync(path.dirname(fs.realpathSync(__filename)) + '/key.js')+'');
 
 var baseUrl = "https://www.timecamp.com/third_party/api/";
 
