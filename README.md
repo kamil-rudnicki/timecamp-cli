@@ -44,6 +44,7 @@ Stop current timer if it's running.
 * `timer-status` action to get current timer and elapsed time, then use crontab to show notification of currently running timer every 15 minutes
 * `add-keywoard` action to add new keyword quickly
 * parameter to start a new timer with a note from a clipboard and try to find a task automatically
+* automatic time tracking in OmniFocus and Apple Scripts [learn how...](https://github.com/kamil-rudnicki/timecamp-cli/wiki)
 
 ## Special thanks
 
