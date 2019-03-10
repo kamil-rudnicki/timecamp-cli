@@ -2,6 +2,8 @@
 
 Access TimeCamp using CLI to make time tracking easier.
 
+![](./demo.gif =250x)
+
 ## Setup
 
 1. `npm install`
