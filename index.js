@@ -52,12 +52,9 @@ function getTasksApi()
             'User-Agent':       'Super Agent/0.0.1',
             'Content-Type':     'application/json'
         },
-        url: baseUrl + "tasks/format/json/perms/track_time/api_token/" + timecamp_api_key,
+        url: baseUrl + "tasks/format/json/exclude_archived/0/perms/track_time/api_token/" + timecamp_api_key,
         method: 'GET'
     };
-
-    //console.log(options.url);
-    //process.exit();
 
     return new Promise(function (fulfill, reject){
 
@@ -129,7 +126,7 @@ function startTimer()
                 if(bestTask.task_id == 0) {
                     console.log("No task found for: " + program.note);
                 } else {
-                    console.log("Found matching task: " + bestTask.task);
+                    console.log("Found matching task: " + bestTask.task + ", tag: " + bestTask.foundedTag);
                     timer.task_id = bestTask.task_id;
                 }
             }
@@ -137,7 +134,7 @@ function startTimer()
 
         var timer2 = startTimerApi(timer);
         timer2.then(function(val){
-            console.log(val);
+            console.log("Success");
         });
 
     });
@@ -153,7 +150,7 @@ function stopTimer()
 
     var timer2 = startTimerApi(timer);
     timer2.then(function(val){
-        console.log(val);
+        console.log("Success");
     });
 }
 
@@ -190,6 +187,7 @@ var findTagInTasks = function(inputTag, allTasks)
 var findBestTask = function(inputTag, allTasks)
 {
     var bestTask = {matched: 0, task: "", tag: "", task_id: 0};
+    var foundedTag = "";
 
     Object.keys(allTasks).forEach(function(key){
         var task2 = allTasks[key];
@@ -218,6 +216,8 @@ var findBestTask = function(inputTag, allTasks)
                     }
                     else
                         matched += tag.length;
+
+                    foundedTag = tag;
                 }
             });
 
@@ -226,6 +226,7 @@ var findBestTask = function(inputTag, allTasks)
                 bestTask.matched = matched;
                 bestTask.task = task2['name'];
                 bestTask['tag'] = inputTag;
+                bestTask['foundedTag'] = foundedTag;
                 bestTask['task_id'] = task2['task_id'];
             }
         }
